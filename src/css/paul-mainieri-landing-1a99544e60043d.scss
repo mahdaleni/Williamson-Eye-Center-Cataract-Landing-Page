@@ -1,5 +1,7 @@
 /* Landing specific css */
-
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/placeholders";
 body {
   height: 100%;
   font-family: Roboto, sans-serif;
@@ -23,7 +25,7 @@ body {
 
 .logo {
   display: inline-block;
-  width: 20%;
+  width: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 45px;
@@ -142,6 +144,10 @@ body {
   line-height: 28px;
   font-weight: 300;
   text-align: left;
+}
+
+.u-text-center {
+  text-align: center;
 }
 
 .section_text.king {
@@ -326,13 +332,14 @@ body {
 }
 
 .top_phone_div {
-  position: static;
-  top: 65px;
-  right: 0px;
-  width: auto;
-  margin-top: 0px;
-  padding-right: 25px;
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 200px;
+  margin-bottom: 0;
+  z-index: 1;
+  @include tablet {
+    top: 100px;
+  }
 }
 
 .top_phone_div:hover {
@@ -340,7 +347,6 @@ body {
 }
 
 .top_phone_btn {
-  display: none;
   width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -358,9 +364,9 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #d6fca3;
-  font-size: 28px;
-  font-weight: 100;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -372,14 +378,6 @@ body {
   margin-right: 10px;
 }
 
-.phone_btn_big_text {
-  display: block;
-  margin-top: 5px;
-  float: none;
-  color: #747aba;
-  line-height: 28px;
-  font-weight: 500;
-}
 
 .btn_text_holder {
   text-align: left;
@@ -426,7 +424,7 @@ body {
   min-height: auto;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-right: 513px;
+  max-width: 700px;
   background-color: transparent;
   font-family: Raleway, sans-serif;
   color: #fff;
@@ -584,7 +582,7 @@ body {
 .review_section {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url('../images/woman_bg.jpg');
+  // background-image: url('../images/woman_bg.jpg');
   background-position: 0px 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -857,7 +855,7 @@ body {
 }
 
 .text-block-2 {
-  margin-bottom: 63px;
+  margin-bottom: 60px;
   padding-left: 16px;
   color: #fff;
   font-size: 17px;
@@ -877,7 +875,7 @@ body {
 
 .image-2 {
   display: block;
-  margin: 103px auto 111px;
+  margin: 103px auto 10px;
 }
 
 .column {
@@ -998,11 +996,11 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     padding-right: 57px;
     padding-left: 57px;
   }
+  .scroll_div {
+    display: none;
+  }
   .learn_more_btn.cataract_test {
     margin-bottom: 22px;
-  }
-  .top_phone_div {
-    margin-top: 7px;
   }
   .main_messag_div {
     top: 25%;
@@ -1210,9 +1208,6 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
   .footer_section {
     padding: 50px 20px 75px;
   }
-  .top_phone_div {
-    padding-right: 5px;
-  }
   .phone_img {
     width: 15%;
     margin-right: 5px;
@@ -1378,10 +1373,6 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     margin-top: 1px;
     font-size: 12px;
     line-height: 16px;
-  }
-  .top_phone_div {
-    display: none;
-    padding-right: 0px;
   }
   .top_phone_btn {
     margin-bottom: 20px;

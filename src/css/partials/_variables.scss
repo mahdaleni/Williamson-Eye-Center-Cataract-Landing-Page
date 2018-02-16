@@ -1,0 +1,37 @@
+//SASS VARIABLES
+$button-font-color: #fff; //ui-button color
+$button-color:#000; //ui-button background color
+
+$alignnone: 5px 20px 20px 0;
+$alignleft: 5px 20px 20px 0;
+$alignright: 5px 0 20px 20px;
+$aligncenter: 5px auto 5px auto;
+$trans: 175ms ease all; //Change this if you want to change the transition speed. Used with the %trans placeholder class
+$box-shadow: 1px 1px 5px rgba( 0, 0, 0, .5 ); // box-shadow
+$box-shadow-hover:  none;
+$site-radius: 0; //If you want to keep the border radius of a site consistent, use this.
+
+// FONT FAMILY */
+$font-family: Montserrat, sans-serif;
+
+// NAVIGATION SPECIFIC VARIABLES */
+$nav-padding: 10px 20px; // Padding for the first level of navigation items
+$nav-color: #222222;  // What font color the first level of nav items will be
+$nav-highlight: #f15033; // What color the links will be when highlighted
+$nav-background-highlight: #fff; //background color for our first level items
+$nav-weight: 500; //Font Weight first level
+$nav-size-1: 15px; //Font size first level navigation items
+$nav-border: 0 none transparent; //Border for the navigation items
+$nav-padding-2: 10px 20px; //Padding for our second level items
+$nav-color-2: #d6cfcf; // Color for nav items second level
+$nav-background-2: #000; //Nav background second Level
+$nav-weight-2: 400; //Font weight Second Level
+$nav-size-2: 13px; // Font Size Second Level
+$nav-decoration: none; //Declares text-decoration
+$nav-transform: uppercase; // Declares text-transform first level
+$nav-transform-2: uppercase; // Declares text-tranform second level
+// MEDIA QUERY VARIABLES */
+$large-screen-break: 1921px; // Sets the first minimum width. used in @mixin large-screen
+$first-break: 991px; // used in mixin @tablet
+$second-break: 767px; // Used for large phones. used in @mixin large-phone
+$third-break: 479px; // Used for phones. @mixin phone

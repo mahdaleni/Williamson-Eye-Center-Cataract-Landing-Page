@@ -1,0 +1,50 @@
+/* placeholder classes */
+@import "variables";
+@import "mixins";
+/* Wordpress Default Align */
+%alignnone {
+	margin: $alignnone;
+}
+%aligncenter {
+    display: block;
+    margin: $aligncenter;
+}
+%alignright {
+    float:right;
+    margin: $alignright;
+		@include phone {
+			display: block;
+			float: none;
+			margin: $aligncenter;
+			clear: both;
+		}
+}
+%alignleft {
+	float: left;
+	margin: $alignleft;
+	@include phone {
+		display: block;
+		float: none;
+		margin: $aligncenter;
+		clear: both;
+	}
+}
+
+/* Transitional placeholder class */
+%trans {
+	@include trans(175ms, ease, all);
+}
+
+/* Box Shadows */
+%box-shadow-hover {
+	-webkit-box-shadow: $box-shadow;
+	        box-shadow: $box-shadow;
+					&:hover {
+						-webkit-box-shadow: $box-shadow-hover;
+										box-shadow: $box-shadow-hover;
+					}
+}
+%box-shadow {
+	-webkit-box-shadow: $box-shadow;
+					box-shadow: $box-shadow;
+}

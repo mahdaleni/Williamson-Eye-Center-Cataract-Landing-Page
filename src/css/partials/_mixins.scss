@@ -1,0 +1,76 @@
+// media query conditionals
+@mixin large-screen( $large-screen-break: 1921px ) {
+  @media(min-width: $large-screen-break ) {
+    @content;
+  }
+}
+@mixin large-phone-landscape( $first-break: 991px ) {
+	@media ( max-width: $first-break ) and ( orientation: landscape ) {
+		@content;
+	}
+}
+
+@mixin tablet( $first-break: 991px )  {
+	@media ( max-width: $first-break ) {
+		@content;
+	}
+}
+
+@mixin phone-landscape( $second-break: 767px ) {
+	@media ( max-width: $second-break ) and ( orientation: landscape ) {
+		@content;
+	}
+}
+
+@mixin large-phone( $second-break: 767px ) {
+	@media ( max-width: $second-break ) {
+		@content;
+	}
+}
+
+@mixin phone( $third-break: 479px ) {
+	@media( max-width: $third-break ) {
+		@content;
+	}
+}
+
+//BUTTON MIXIN
+
+@mixin ui-button($btn-background : #000, $btn-font-color: #fff, $bdr-radius: 0, $padding...) {
+		background-color: $btn-background;
+		$btn-color: $btn-background;
+		color: $btn-font-color;
+	&:hover {
+			background-color: lighten($btn-color, 50);
+	}
+	@if $padding {
+		@each $pad in $padding {
+			padding: #{$pad};
+		}
+	}
+	@else {
+		padding:0;
+	}
+	  border-radius: $bdr-radius;
+}
+
+//Transitional mixin
+
+@mixin trans( $time, $animation, $element ) {
+  transition: $time $animation $element;
+  -webkit-transition: $time $animation $element;
+}
+
+//box-shadow mixins
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+          box-shadow: $box-shadow;
+}
+@mixin box-shadow-hover($box-shadow, $box-shadow-hover) {
+  -webkit-box-shadow: $box-shadow;
+          box-shadow: $box-shadow;
+  &:hover {
+    -webkit-box-shadow: $box-shadow-hover;
+            box-shadow: $box-shadow-hover;
+  }
+}
