@@ -57,5 +57,8 @@ gulp.task('default', function() {
   gulp.task( 'critical' );
 });
 gulp.task( 'watch', function() {
-  gulp.watch( ['src/css/**/*.css', '!dist/**/*.css'], ['uncss', 'critical'] ); //TODO: REVISE SO THAT GULP DOESN'T LOOP. - SOLVED
+  gulp.watch( ['src/css/**/*.css', '!dist/**/*'], ['concat', 'critical'] );
+  gulp.watch( ['src/css/**/*.js', '!dist/**/*'], ['concat-scripts'] ); //TODO: REVISE SO THAT GULP DOESN'T LOOP. - SOLVED
+  gulp.watch( ['src/*.html', '!dist/**/*'], ['critical'] );
+  gulp.watch( ['src/**/*', '!src/**/*.js', '!src/**/*.css', '!src/**/*.scss', '!dist/**/*', '!src/**/*.html'], ['imagemin'] );
 } )
