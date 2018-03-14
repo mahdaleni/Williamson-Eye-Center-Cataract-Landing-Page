@@ -55,6 +55,8 @@ body {
   text-transform: none;
 }
 
+
+
 .navlink:hover {
   background-color: transparent;
   color: #25aae1;
@@ -65,8 +67,8 @@ body {
 }
 
 .navlink.scroll {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: calc(5px + .1vw);
+  padding-left: calc(5px + .1vw);
   color: #fff;
 }
 
@@ -78,6 +80,29 @@ body {
   color: #fdd023;
 }
 
+.phone--mobile-icon {
+  display: none;
+  @include tablet {
+    float: right;
+    display: inline-block;
+    margin: 15px 20px 10px 10px;
+  }
+  @include large-phone {
+
+    margin: 10px 20px 10px 10px;
+
+  }
+}
+.phone--mobile-icon__number {
+  display: inline-block;
+  color: #562399;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1.125;
+  @include phone {
+    display: none;
+  }
+}
 .navmenu {
   width: 100%;
   border-bottom: 1px none rgba(4, 105, 58, .14);
@@ -334,7 +359,7 @@ body {
 .top_phone_div {
   position: absolute;
   right: 20px;
-  top: 200px;
+  top: 170px;
   margin-bottom: 0;
   z-index: 1;
   @include tablet {
@@ -413,7 +438,7 @@ body {
 
 .main_messag_div.mobile {
   left: auto;
-  top: 32%;
+  top: 34%;
   right: 0px;
   width: 60%;
   padding-top: 0px;
@@ -467,7 +492,7 @@ body {
   margin-left: 0px;
   padding: 20px 31px;
   border-radius: 30px;
-  background-color: #cfaf00;
+  background-color: #fdd023;
   color: #562399;
   font-size: 16px;
   line-height: 18px;
@@ -859,6 +884,9 @@ body {
   padding-left: 16px;
   color: #fff;
   font-size: 17px;
+  @include phone {
+    margin-bottom: 10px;
+  }
 }
 
 .text-block-3 {
@@ -876,6 +904,9 @@ body {
 .image-2 {
   display: block;
   margin: 103px auto 10px;
+  @include phone {
+    margin: 10px auto 10px;
+  }
 }
 
 .column {
@@ -951,13 +982,14 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
   .logo {
     width: 200px;
     margin-top: 5px;
-    margin-bottom: 5px;
     margin-left: 25px;
+    margin-bottom: 0;
     float: left;
   }
   .main_section {
-    background-position: 0px 0px, 50% 50%;
+    background-position: center left;
     background-size: auto, cover;
+    position: relative;
   }
   .container_div {
     width: 90%;
@@ -1112,9 +1144,10 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     line-height: 36px;
   }
   .manu_btn {
-    margin-top: 12px;
+    margin-top: 5px;
     background-color: #562399;
     color: #fff;
+    font-size: 25px;
   }
   .manu_btn:hover {
     background-color: #061731;
@@ -1157,7 +1190,7 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
 @media (max-width: 767px) {
   .logo {
     width: 150px;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 3px;
     margin-left: 10px;
     padding-left: 0px;
@@ -1304,7 +1337,7 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
   .logo {
     display: block;
     width: 150px;
-    margin-top: 1px;
+    margin-top: 5px;
     margin-bottom: 0px;
   }
   .logo.bottom {
@@ -1313,9 +1346,10 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     margin-top: 1px;
   }
   .main_section {
-    height: 64%;
+    height: 100%;
     background-image: url('../images/hero-slide.jpg');
     background-size: cover;
+    background-position: 10% 0;
     background-repeat: no-repeat;
   }
   .why_king_cataract_section {
@@ -1334,7 +1368,7 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     padding-bottom: 75px;
   }
   .locations_section {
-    padding: 50px 0px 0px;
+    padding: 50px 0px 50px;
   }
   .locations_container {
     -webkit-box-orient: vertical;
@@ -1403,6 +1437,7 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
     padding-right: 14px;
     padding-left: 14px;
     background-image: none;
+    background-color: rgba(0,0,0,.5);
   }
   .main_headline1 {
     font-size: 24px;
